@@ -1,3 +1,4 @@
+/** Find the first repeated elemnet in the string */
 function findFirstRepeated(string) {
   let array = string.split("");
   let obj = {};

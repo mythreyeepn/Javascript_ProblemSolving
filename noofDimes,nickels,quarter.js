@@ -1,3 +1,4 @@
+/** Find the numbers of coins you can give basing on the amount given  */
 var remainingAmnt = 182;
 let coinsObj = {
   quarters: 25,

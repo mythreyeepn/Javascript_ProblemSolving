@@ -1,3 +1,4 @@
+/** In the given array of 1's nd 0's move all the ones to the left and the all the )'s to the right */
 var array = [1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0];
 
 let i = 0;

@@ -1,19 +1,6 @@
-// Input
-const denormalized = {
-  id: "grandParent",
-  children: [
-    {
-      id: "parent1",
-      children: [{ id: "child1" }],
-    },
-    {
-      id: "parent2",
-      children: [{ id: "child2" }, { id: "child3" }],
-    },
-  ],
-};
-//The output has to be in this way.
-const Output = {
+/**
+ * For the given input denormalized write code to generate output as given below
+ * const output = {
   grandParent: {
     id: "garndParent",
     children: ["parent1", "parent2"],
@@ -36,6 +23,23 @@ const Output = {
     id: "child3",
   },
 };
+ */
+
+// Input
+const denormalized = {
+  id: "grandParent",
+  children: [
+    {
+      id: "parent1",
+      children: [{ id: "child1" }],
+    },
+    {
+      id: "parent2",
+      children: [{ id: "child2" }, { id: "child3" }],
+    },
+  ],
+};
+//The output has to be in this way.
 
 const modify = (obj) => {
   let res = {};
@@ -53,14 +57,4 @@ const modify = (obj) => {
   return res;
 };
 
-let largeArray = [];
-for (let i = 0; i < 10000000; i++) {
-  largeArray.push(i);
-}
-
-const acc = largeArray.reduce((acc, array, index) => {
-  if (index % 2 === 0) {
-    return [...acc, array];
-  }
-  return acc;
-}, []);
+console.log(modify(denormalized));
